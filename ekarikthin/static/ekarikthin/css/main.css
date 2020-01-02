@@ -1,0 +1,759 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+body, html {
+  height: 100%;
+}
+
+.wrapper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+header {
+  position: relative;
+  top: 100vh;
+  left: 0;
+}
+
+nav {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  left: 0;
+  height: 14.78vh;
+  background-color: transparent;
+}
+
+nav .nav_links_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70%;
+}
+
+nav .nav_links_ul li {
+  list-style-type: none;
+}
+
+nav .nav_links_ul li a {
+  color: #7e7e7e;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 1.1875rem;
+}
+
+nav .nav_links_ul li a:hover {
+  color: black;
+}
+
+.sticky_nav {
+  -webkit-transition: background-color 285ms ease, -webkit-box-shadow 285ms ease;
+  transition: background-color 285ms ease, -webkit-box-shadow 285ms ease;
+  transition: box-shadow 285ms ease, background-color 285ms ease;
+  transition: box-shadow 285ms ease, background-color 285ms ease, -webkit-box-shadow 285ms ease;
+  will-change: box-shadow, background-color;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.sticky_nav_on_scroll {
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.09);
+  background: #b9915a;
+}
+
+.sticky_nav_on_scroll .nav_links_ul li a {
+  color: #232D41;
+}
+
+.sticky_nav_on_scroll .nav_links_ul li a:hover {
+  color: #fbec96;
+}
+
+.small_nav {
+  height: 8vh;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  min-height: 3000px;
+  height: 100%;
+}
+
+#landing {
+  width: 100%;
+  height: 100vh;
+  min-height: 758px;
+  background: url("../img/concert.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+#landing .social_media {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#landing .social_media .facebook, #landing .social_media .insta {
+  width: 35px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+#landing .social_media .youtube {
+  width: 40px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 593.5576px;
+  stroke-dashoffset: 593.5576px;
+  -webkit-animation: line-anim 3s ease forwards;
+          animation: line-anim 3s ease forwards;
+}
+
+#logo path:nth-child(3) {
+  stroke-dasharray: 719.68px;
+  stroke-dashoffset: 719.68px;
+  -webkit-animation: line-anim 3s ease forwards 0.3s;
+          animation: line-anim 3s ease forwards 0.3s;
+}
+
+#logo path:nth-child(4) {
+  stroke-dasharray: 442.761px;
+  stroke-dashoffset: 442.761px;
+  -webkit-animation: line-anim 3s ease forwards 0.6s;
+          animation: line-anim 3s ease forwards 0.6s;
+}
+
+#logo path:nth-child(5) {
+  stroke-dasharray: 315.257px;
+  stroke-dashoffset: 315.257px;
+  -webkit-animation: line-anim 3s ease forwards 0.9s;
+          animation: line-anim 3s ease forwards 0.9s;
+}
+
+#logo path:nth-child(6) {
+  stroke-dasharray: 269.263px;
+  stroke-dashoffset: 269.263px;
+  -webkit-animation: line-anim 3s ease forwards 1.2s;
+          animation: line-anim 3s ease forwards 1.2s;
+}
+
+#logo path:nth-child(7) {
+  stroke-dasharray: 719.68px;
+  stroke-dashoffset: 719.68px;
+  -webkit-animation: line-anim 3s ease forwards 1.5s;
+          animation: line-anim 3s ease forwards 1.5s;
+}
+
+#logo path:nth-child(8) {
+  stroke-dasharray: 1062.61px;
+  stroke-dashoffset: 1062.61px;
+  -webkit-animation: line-anim 3s ease forwards 1.8s;
+          animation: line-anim 3s ease forwards 1.8s;
+}
+
+#logo path:nth-child(9) {
+  stroke-dasharray: 269.264px;
+  stroke-dashoffset: 269.264px;
+  -webkit-animation: line-anim 3s ease forwards 2.1s;
+          animation: line-anim 3s ease forwards 2.1s;
+}
+
+#logo path:nth-child(10) {
+  stroke-dasharray: 374.34px;
+  stroke-dashoffset: 374.34px;
+  -webkit-animation: line-anim 3s ease forwards 2.4s;
+          animation: line-anim 3s ease forwards 2.4s;
+}
+
+#path-1-outside-1 {
+  -webkit-animation: fill_up 0.8s ease forwards 4.5s;
+          animation: fill_up 0.8s ease forwards 4.5s;
+}
+
+rect {
+  -webkit-animation: fill_rect 0.8s ease forwards 4.5s;
+          animation: fill_rect 0.8s ease forwards 4.5s;
+}
+
+#logo {
+  -webkit-animation: fill_up 0.8s ease forwards 4.5s;
+          animation: fill_up 0.8s ease forwards 4.5s;
+}
+
+@-webkit-keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fill_up {
+  from {
+    fill: black;
+  }
+  to {
+    fill: white;
+    color: white;
+  }
+}
+
+@keyframes fill_up {
+  from {
+    fill: black;
+  }
+  to {
+    fill: white;
+    color: white;
+  }
+}
+
+@-webkit-keyframes fill_rect {
+  to {
+    fill: black;
+  }
+}
+
+@keyframes fill_rect {
+  to {
+    fill: black;
+  }
+}
+
+#countdown_timer {
+  font-size: 2rem;
+  font-family: 'New Rocker', cursive;
+  color: #FFF;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+#events {
+  position: relative;
+  top: 100vh;
+  min-height: 758px;
+  height: 100vh;
+  width: 100%;
+  background-image: radial-gradient(circle, #d1ba9a, #f4f4ea);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.main_events {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0 10px 0;
+}
+
+.main_events .event_container_bottom {
+  padding-top: 55px;
+}
+
+.main_events .event_container_top, .main_events .event_container_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main_events .event_container_top .cultural_overlay, .main_events .event_container_top .technical_overlay, .main_events .event_container_top .gaming_overlay, .main_events .event_container_top .sports_overlay, .main_events .event_container_bottom .cultural_overlay, .main_events .event_container_bottom .technical_overlay, .main_events .event_container_bottom .gaming_overlay, .main_events .event_container_bottom .sports_overlay {
+  height: 45vh;
+  min-height: 352px;
+  cursor: pointer;
+}
+
+.main_events .event_container_top .cultural_overlay img, .main_events .event_container_top .technical_overlay img, .main_events .event_container_top .gaming_overlay img, .main_events .event_container_top .sports_overlay img, .main_events .event_container_bottom .cultural_overlay img, .main_events .event_container_bottom .technical_overlay img, .main_events .event_container_bottom .gaming_overlay img, .main_events .event_container_bottom .sports_overlay img {
+  height: 45vh;
+  min-height: 352px;
+  border-radius: 45vh;
+}
+
+.main_events .event_container_top .cultural_overlay .cultural_text_div, .main_events .event_container_top .cultural_overlay .technical_text_div, .main_events .event_container_top .cultural_overlay .gaming_text_div, .main_events .event_container_top .cultural_overlay .sports_text_div, .main_events .event_container_top .technical_overlay .cultural_text_div, .main_events .event_container_top .technical_overlay .technical_text_div, .main_events .event_container_top .technical_overlay .gaming_text_div, .main_events .event_container_top .technical_overlay .sports_text_div, .main_events .event_container_top .gaming_overlay .cultural_text_div, .main_events .event_container_top .gaming_overlay .technical_text_div, .main_events .event_container_top .gaming_overlay .gaming_text_div, .main_events .event_container_top .gaming_overlay .sports_text_div, .main_events .event_container_top .sports_overlay .cultural_text_div, .main_events .event_container_top .sports_overlay .technical_text_div, .main_events .event_container_top .sports_overlay .gaming_text_div, .main_events .event_container_top .sports_overlay .sports_text_div, .main_events .event_container_bottom .cultural_overlay .cultural_text_div, .main_events .event_container_bottom .cultural_overlay .technical_text_div, .main_events .event_container_bottom .cultural_overlay .gaming_text_div, .main_events .event_container_bottom .cultural_overlay .sports_text_div, .main_events .event_container_bottom .technical_overlay .cultural_text_div, .main_events .event_container_bottom .technical_overlay .technical_text_div, .main_events .event_container_bottom .technical_overlay .gaming_text_div, .main_events .event_container_bottom .technical_overlay .sports_text_div, .main_events .event_container_bottom .gaming_overlay .cultural_text_div, .main_events .event_container_bottom .gaming_overlay .technical_text_div, .main_events .event_container_bottom .gaming_overlay .gaming_text_div, .main_events .event_container_bottom .gaming_overlay .sports_text_div, .main_events .event_container_bottom .sports_overlay .cultural_text_div, .main_events .event_container_bottom .sports_overlay .technical_text_div, .main_events .event_container_bottom .sports_overlay .gaming_text_div, .main_events .event_container_bottom .sports_overlay .sports_text_div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 240px;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.main_events .event_container_top .cultural_overlay .cultural_text_div .cultural_text, .main_events .event_container_top .cultural_overlay .cultural_text_div .technical_text, .main_events .event_container_top .cultural_overlay .cultural_text_div .gaming_text, .main_events .event_container_top .cultural_overlay .cultural_text_div .sports_text, .main_events .event_container_top .cultural_overlay .technical_text_div .cultural_text, .main_events .event_container_top .cultural_overlay .technical_text_div .technical_text, .main_events .event_container_top .cultural_overlay .technical_text_div .gaming_text, .main_events .event_container_top .cultural_overlay .technical_text_div .sports_text, .main_events .event_container_top .cultural_overlay .gaming_text_div .cultural_text, .main_events .event_container_top .cultural_overlay .gaming_text_div .technical_text, .main_events .event_container_top .cultural_overlay .gaming_text_div .gaming_text, .main_events .event_container_top .cultural_overlay .gaming_text_div .sports_text, .main_events .event_container_top .cultural_overlay .sports_text_div .cultural_text, .main_events .event_container_top .cultural_overlay .sports_text_div .technical_text, .main_events .event_container_top .cultural_overlay .sports_text_div .gaming_text, .main_events .event_container_top .cultural_overlay .sports_text_div .sports_text, .main_events .event_container_top .technical_overlay .cultural_text_div .cultural_text, .main_events .event_container_top .technical_overlay .cultural_text_div .technical_text, .main_events .event_container_top .technical_overlay .cultural_text_div .gaming_text, .main_events .event_container_top .technical_overlay .cultural_text_div .sports_text, .main_events .event_container_top .technical_overlay .technical_text_div .cultural_text, .main_events .event_container_top .technical_overlay .technical_text_div .technical_text, .main_events .event_container_top .technical_overlay .technical_text_div .gaming_text, .main_events .event_container_top .technical_overlay .technical_text_div .sports_text, .main_events .event_container_top .technical_overlay .gaming_text_div .cultural_text, .main_events .event_container_top .technical_overlay .gaming_text_div .technical_text, .main_events .event_container_top .technical_overlay .gaming_text_div .gaming_text, .main_events .event_container_top .technical_overlay .gaming_text_div .sports_text, .main_events .event_container_top .technical_overlay .sports_text_div .cultural_text, .main_events .event_container_top .technical_overlay .sports_text_div .technical_text, .main_events .event_container_top .technical_overlay .sports_text_div .gaming_text, .main_events .event_container_top .technical_overlay .sports_text_div .sports_text, .main_events .event_container_top .gaming_overlay .cultural_text_div .cultural_text, .main_events .event_container_top .gaming_overlay .cultural_text_div .technical_text, .main_events .event_container_top .gaming_overlay .cultural_text_div .gaming_text, .main_events .event_container_top .gaming_overlay .cultural_text_div .sports_text, .main_events .event_container_top .gaming_overlay .technical_text_div .cultural_text, .main_events .event_container_top .gaming_overlay .technical_text_div .technical_text, .main_events .event_container_top .gaming_overlay .technical_text_div .gaming_text, .main_events .event_container_top .gaming_overlay .technical_text_div .sports_text, .main_events .event_container_top .gaming_overlay .gaming_text_div .cultural_text, .main_events .event_container_top .gaming_overlay .gaming_text_div .technical_text, .main_events .event_container_top .gaming_overlay .gaming_text_div .gaming_text, .main_events .event_container_top .gaming_overlay .gaming_text_div .sports_text, .main_events .event_container_top .gaming_overlay .sports_text_div .cultural_text, .main_events .event_container_top .gaming_overlay .sports_text_div .technical_text, .main_events .event_container_top .gaming_overlay .sports_text_div .gaming_text, .main_events .event_container_top .gaming_overlay .sports_text_div .sports_text, .main_events .event_container_top .sports_overlay .cultural_text_div .cultural_text, .main_events .event_container_top .sports_overlay .cultural_text_div .technical_text, .main_events .event_container_top .sports_overlay .cultural_text_div .gaming_text, .main_events .event_container_top .sports_overlay .cultural_text_div .sports_text, .main_events .event_container_top .sports_overlay .technical_text_div .cultural_text, .main_events .event_container_top .sports_overlay .technical_text_div .technical_text, .main_events .event_container_top .sports_overlay .technical_text_div .gaming_text, .main_events .event_container_top .sports_overlay .technical_text_div .sports_text, .main_events .event_container_top .sports_overlay .gaming_text_div .cultural_text, .main_events .event_container_top .sports_overlay .gaming_text_div .technical_text, .main_events .event_container_top .sports_overlay .gaming_text_div .gaming_text, .main_events .event_container_top .sports_overlay .gaming_text_div .sports_text, .main_events .event_container_top .sports_overlay .sports_text_div .cultural_text, .main_events .event_container_top .sports_overlay .sports_text_div .technical_text, .main_events .event_container_top .sports_overlay .sports_text_div .gaming_text, .main_events .event_container_top .sports_overlay .sports_text_div .sports_text, .main_events .event_container_bottom .cultural_overlay .cultural_text_div .cultural_text, .main_events .event_container_bottom .cultural_overlay .cultural_text_div .technical_text, .main_events .event_container_bottom .cultural_overlay .cultural_text_div .gaming_text, .main_events .event_container_bottom .cultural_overlay .cultural_text_div .sports_text, .main_events .event_container_bottom .cultural_overlay .technical_text_div .cultural_text, .main_events .event_container_bottom .cultural_overlay .technical_text_div .technical_text, .main_events .event_container_bottom .cultural_overlay .technical_text_div .gaming_text, .main_events .event_container_bottom .cultural_overlay .technical_text_div .sports_text, .main_events .event_container_bottom .cultural_overlay .gaming_text_div .cultural_text, .main_events .event_container_bottom .cultural_overlay .gaming_text_div .technical_text, .main_events .event_container_bottom .cultural_overlay .gaming_text_div .gaming_text, .main_events .event_container_bottom .cultural_overlay .gaming_text_div .sports_text, .main_events .event_container_bottom .cultural_overlay .sports_text_div .cultural_text, .main_events .event_container_bottom .cultural_overlay .sports_text_div .technical_text, .main_events .event_container_bottom .cultural_overlay .sports_text_div .gaming_text, .main_events .event_container_bottom .cultural_overlay .sports_text_div .sports_text, .main_events .event_container_bottom .technical_overlay .cultural_text_div .cultural_text, .main_events .event_container_bottom .technical_overlay .cultural_text_div .technical_text, .main_events .event_container_bottom .technical_overlay .cultural_text_div .gaming_text, .main_events .event_container_bottom .technical_overlay .cultural_text_div .sports_text, .main_events .event_container_bottom .technical_overlay .technical_text_div .cultural_text, .main_events .event_container_bottom .technical_overlay .technical_text_div .technical_text, .main_events .event_container_bottom .technical_overlay .technical_text_div .gaming_text, .main_events .event_container_bottom .technical_overlay .technical_text_div .sports_text, .main_events .event_container_bottom .technical_overlay .gaming_text_div .cultural_text, .main_events .event_container_bottom .technical_overlay .gaming_text_div .technical_text, .main_events .event_container_bottom .technical_overlay .gaming_text_div .gaming_text, .main_events .event_container_bottom .technical_overlay .gaming_text_div .sports_text, .main_events .event_container_bottom .technical_overlay .sports_text_div .cultural_text, .main_events .event_container_bottom .technical_overlay .sports_text_div .technical_text, .main_events .event_container_bottom .technical_overlay .sports_text_div .gaming_text, .main_events .event_container_bottom .technical_overlay .sports_text_div .sports_text, .main_events .event_container_bottom .gaming_overlay .cultural_text_div .cultural_text, .main_events .event_container_bottom .gaming_overlay .cultural_text_div .technical_text, .main_events .event_container_bottom .gaming_overlay .cultural_text_div .gaming_text, .main_events .event_container_bottom .gaming_overlay .cultural_text_div .sports_text, .main_events .event_container_bottom .gaming_overlay .technical_text_div .cultural_text, .main_events .event_container_bottom .gaming_overlay .technical_text_div .technical_text, .main_events .event_container_bottom .gaming_overlay .technical_text_div .gaming_text, .main_events .event_container_bottom .gaming_overlay .technical_text_div .sports_text, .main_events .event_container_bottom .gaming_overlay .gaming_text_div .cultural_text, .main_events .event_container_bottom .gaming_overlay .gaming_text_div .technical_text, .main_events .event_container_bottom .gaming_overlay .gaming_text_div .gaming_text, .main_events .event_container_bottom .gaming_overlay .gaming_text_div .sports_text, .main_events .event_container_bottom .gaming_overlay .sports_text_div .cultural_text, .main_events .event_container_bottom .gaming_overlay .sports_text_div .technical_text, .main_events .event_container_bottom .gaming_overlay .sports_text_div .gaming_text, .main_events .event_container_bottom .gaming_overlay .sports_text_div .sports_text, .main_events .event_container_bottom .sports_overlay .cultural_text_div .cultural_text, .main_events .event_container_bottom .sports_overlay .cultural_text_div .technical_text, .main_events .event_container_bottom .sports_overlay .cultural_text_div .gaming_text, .main_events .event_container_bottom .sports_overlay .cultural_text_div .sports_text, .main_events .event_container_bottom .sports_overlay .technical_text_div .cultural_text, .main_events .event_container_bottom .sports_overlay .technical_text_div .technical_text, .main_events .event_container_bottom .sports_overlay .technical_text_div .gaming_text, .main_events .event_container_bottom .sports_overlay .technical_text_div .sports_text, .main_events .event_container_bottom .sports_overlay .gaming_text_div .cultural_text, .main_events .event_container_bottom .sports_overlay .gaming_text_div .technical_text, .main_events .event_container_bottom .sports_overlay .gaming_text_div .gaming_text, .main_events .event_container_bottom .sports_overlay .gaming_text_div .sports_text, .main_events .event_container_bottom .sports_overlay .sports_text_div .cultural_text, .main_events .event_container_bottom .sports_overlay .sports_text_div .technical_text, .main_events .event_container_bottom .sports_overlay .sports_text_div .gaming_text, .main_events .event_container_bottom .sports_overlay .sports_text_div .sports_text {
+  color: black;
+  width: 100%;
+  font-size: 2.5rem;
+  font-family: 'Lemonada', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main_events .event_container_top .cultural_overlay:hover .cultural_text_div, .main_events .event_container_top .technical_overlay:hover .technical_text_div, .main_events .event_container_top .gaming_overlay:hover .gaming_text_div, .main_events .event_container_top .sports_overlay:hover .sports_text_div, .main_events .event_container_bottom .cultural_overlay:hover .cultural_text_div, .main_events .event_container_bottom .technical_overlay:hover .technical_text_div, .main_events .event_container_bottom .gaming_overlay:hover .gaming_text_div, .main_events .event_container_bottom .sports_overlay:hover .sports_text_div {
+  opacity: 1;
+}
+
+.main_events .event_container_top img:hover, .main_events .event_container_bottom img:hover {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
+  opacity: 0.7;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(185, 145, 90, 0.8);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal_content {
+  background-color: #f4f4ea;
+  margin: 20% auto;
+  padding: 20px;
+  width: 70%;
+  height: 54%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.close_btn {
+  background-color: white;
+  float: right;
+  margin-right: -35px;
+  margin-top: -35px;
+  width: 30px;
+  font-size: 28px;
+  text-align: center;
+  height: 30px;
+  border-radius: 30px;
+  color: #daca98;
+}
+
+.close_btn:hover, .close_btn:focus {
+  color: #685212;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cultural_modal_image_holder {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.cultural_modal_image_holder img {
+  height: 100%;
+}
+
+.technical_modal_image_holder {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.technical_modal_image_holder img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+
+@-webkit-keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#gallery {
+  position: relative;
+  top: 100vh;
+  min-height: 758px;
+  height: 100vh;
+  padding: 5px;
+  width: 100%;
+  background-image: radial-gradient(circle, #d1ba9a, #f4f4ea);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 5px;
+  z-index: 2;
+}
+
+.picture_holder {
+  width: 100%;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 280px 280px 280px 280px 280px;
+      grid-template-columns: 280px 280px 280px 280px 280px;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.picture_holder .image_holder {
+  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+}
+
+.picture_holder .image_holder .slide_img {
+  height: 186px;
+  position: absolute;
+  left: 0;
+  -webkit-animation-name: crossfade;
+          animation-name: crossfade;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 11s;
+          animation-duration: 11s;
+}
+
+.picture_holder .image_holder .slide_img:nth-of-type(1) {
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+.picture_holder .image_holder .slide_img:nth-of-type(2) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+.picture_holder .image_holder .slide_img:nth-of-type(3) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.picture_holder .image_holder .slide_img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+@-webkit-keyframes crossfade {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes crossfade {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#contacts {
+  position: relative;
+  top: 100vh;
+  min-height: 758px;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  margin-bottom: 441px;
+  background-image: radial-gradient(circle, #d1ba9a, #f4f4ea);
+  -webkit-box-shadow: #000 0 7px 35px 0;
+  box-shadow: 3px 2px 2px 0px rgba(51, 51, 51, 0.5);
+}
+
+#contacts .contact_wrapper {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+}
+
+#contacts .contact_wrapper .contact_holder {
+  width: auto;
+  height: auto;
+  background-color: brown;
+}
+
+/* css for Developers section */
+#developers {
+  position: fixed;
+  bottom: 0;
+  height: 441px;
+  max-height: 441px;
+  width: 100%;
+  background-color: #EAF4F4;
+  background-attachment: fixed;
+  background-position: center;
+  display: none;
+  z-index: 1;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  height: 200px;
+  width: 600px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+  opacity: .8;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.image:hover,
+.card:hover .image {
+  height: 200px;
+  opacity: 1;
+}
+
+.image > img {
+  width: 200px;
+}
+
+.text {
+  height: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 180px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social_link img {
+  height: 32px;
+  width: 32px;
+}
+/*# sourceMappingURL=main.css.map */
